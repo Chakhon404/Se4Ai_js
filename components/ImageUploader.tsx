@@ -19,7 +19,7 @@ interface Props {
   onLoadingChange: (loading: boolean) => void
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://8bc6-202-28-119-68.ngrok-free.app'
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://localhost:5000 '
 
 export default function ImageUploader({ onPrediction, onError, onLoadingChange }: Props) {
   const [dragActive, setDragActive] = useState(false)
