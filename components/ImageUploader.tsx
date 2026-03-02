@@ -19,7 +19,7 @@ interface Props {
   onLoadingChange: (loading: boolean) => void
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://d757-202-28-119-68.ngrok-free.app'
 
 export default function ImageUploader({ onPrediction, onError, onLoadingChange }: Props) {
   const [dragActive, setDragActive] = useState(false)
@@ -101,6 +101,7 @@ export default function ImageUploader({ onPrediction, onError, onLoadingChange }
         {
           headers: {
             'Content-Type': 'multipart/form-data',
+            'ngrok-skip-browser-warning': '69420',
           },
           timeout: 30000, // 30 วินาที
         }
